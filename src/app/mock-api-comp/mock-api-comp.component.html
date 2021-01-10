@@ -1,0 +1,41 @@
+<div>
+    <p>{{success}}</p>
+    <table class="text-center">
+        <tr>
+            <th>
+                id
+            </th>
+            <th>
+                <input [(ngModel)]="searchTxt" type="text" class="form-control" placeholder="Search here...">
+                employee_name
+            </th>
+            <th>
+                <ng-select [items]="dropdownAge" bindLabel="filterName" bindValue="value" (change)="filterAge($event)"
+                    placeholder="Filter by age">
+
+                </ng-select>
+
+                employee_age
+            </th>
+            <th>
+                <ng-select [items]="dropdownSalary" (change)="filterSalary($event)" placeholder="Filter by salary">
+                </ng-select>
+                employee_salary
+            </th>
+        </tr>
+        <tr *ngFor="let d of apiData | search: searchTxt; ; index as i">
+            <td>
+                {{d.id}}
+            </td>
+            <td>
+                {{d.employee_name}}
+            </td>
+            <td>
+                {{d.employee_age}}
+            </td>
+            <td>
+                {{d.employee_salary}}
+            </td>
+        </tr>
+    </table>
+</div>

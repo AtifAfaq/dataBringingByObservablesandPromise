@@ -1,0 +1,26 @@
+<div>
+    <table>
+      <tr>
+        <th>
+          id
+        </th>
+        <th>
+          title
+        </th>
+        <th>
+         picture
+        </th>
+      </tr>
+      <tr *ngFor="let d of Data">
+        <td>
+          {{d.id}}
+        </td>
+        <td>
+          {{d.title}}
+        </td>
+        <td>
+         <img style="width:100px; height: 100px; " src={{d.url}}> 
+        </td>
+      </tr>
+    </table>
+  </div>

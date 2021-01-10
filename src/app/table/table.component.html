@@ -1,0 +1,26 @@
+<div>
+    <table>
+      <tr>
+        <th>
+          id
+        </th>
+        <th>
+          title
+        </th>
+        <th>
+          completed
+        </th>
+      </tr>
+      <tr *ngFor="let d of Data">
+        <td>
+          {{d.id}}
+        </td>
+        <td>
+          {{d.title}}
+        </td>
+        <td>
+          {{d.completed}}
+        </td>
+      </tr>
+    </table>
+  </div>
